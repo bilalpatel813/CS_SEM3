@@ -37,9 +37,18 @@ class Singlylinkedlist:
         else:
             current = current.next
             print("Not found")
-
- 
-               
+    def delete(self,key):
+        if not self.head:
+            print("list is empty")
+        else:
+            current = self.head
+            while current is not None:
+                if current.next == key:
+                    current.next = current.next.next
+                    return
+                current =current.next
+            print(key,"Not found")
+           
 sll = Singlylinkedlist()
 sll.append(100)
 sll.append(200)
@@ -49,3 +58,5 @@ sll.prepend(1500)
 print("After prepend")
 sll.traverse()
 sll.search(1500)
+sll.delete(1500)
+sll.traverse()
