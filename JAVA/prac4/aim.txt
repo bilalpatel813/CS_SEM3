@@ -1,0 +1,3 @@
+Practical No : 4
+a) write a program to demostrate methods of List interface using ArrayList and LinkedList..
+b) write a program to demonstrate methods of 
