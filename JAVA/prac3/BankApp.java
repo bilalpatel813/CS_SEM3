@@ -17,8 +17,10 @@ class Bank {
         open = true;
         notifyAll();
     }
-    public class BankApp {
-        public static void main(String[] args){
+    
+}
+public class BankApp {
+    public static void main(String[] args){
             Bank bank = new Bank();
             Thread c1 = new Thread(() -> bank.waitForOpening("Customer 1"));
             Thread c2 = new Thread(() -> bank.waitForOpening("Customer 2"));
@@ -30,10 +32,11 @@ class Bank {
             new Thread(() -> {
                 try {
                     Thread.sleep(1000);
-                } catch (Exception e) {
                     bank.openBank();
+                } catch (Exception e) {
+                    System.out.println("error :"+e);
                 }
             }).start();
-        }
     }
 }
+

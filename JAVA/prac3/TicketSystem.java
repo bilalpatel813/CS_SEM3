@@ -35,8 +35,8 @@ public class TicketSystem {
     public static void main(String[] args) {
         TicketBooking booking = new TicketBooking();
 
-        Person p1 = new Person(booking, "Adnan");
-        Person p2 = new Person(booking, "Raza");
+        Person p1 = new Person(booking, "Bilal");
+        Person p2 = new Person(booking, "Adnan");
         
         p1.start();
         p2.start();
