@@ -17,14 +17,13 @@ class Bank {
         open = true;
         notifyAll();
     }
-    
-}
-public class BankApp {
-    public static void main(String[] args){
+}   
+    public class BankApp {
+        public static void main(String[] args){
             Bank bank = new Bank();
-            Thread c1 = new Thread(() -> bank.waitForOpening("Customer 1"));
-            Thread c2 = new Thread(() -> bank.waitForOpening("Customer 2"));
-            Thread c3 = new Thread(() -> bank.waitForOpening("Customer 3"));
+            Thread c1 = new Thread(() -> bank.waitForOpening("Adnan"));
+            Thread c2 = new Thread(() -> bank.waitForOpening("Farhan"));
+            Thread c3 = new Thread(() -> bank.waitForOpening("Obaid"));
 
             c1.start();
             c2.start();
@@ -32,11 +31,11 @@ public class BankApp {
             new Thread(() -> {
                 try {
                     Thread.sleep(1000);
-                    bank.openBank();
                 } catch (Exception e) {
-                    System.out.println("error :"+e);
+                    e.printStackTrace();
                 }
+                bank.openBank();
             }).start();
+        }
     }
-}
 
