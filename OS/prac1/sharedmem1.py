@@ -16,7 +16,7 @@ def main():
 
         print("Data written to shared memory ", message)
 
-        input("Press to Continue...")
+        input("Press to Continue  ...")
     finally:
         shm.close()
         shm.unlink()
