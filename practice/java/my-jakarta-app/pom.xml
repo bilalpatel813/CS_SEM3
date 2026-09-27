@@ -9,8 +9,8 @@
   <url>http://maven.apache.org</url>
   <dependencies>
     <dependency>
-      <groupId>jakarta-servlet</groupId>
-      <artifactId>jakarta-servlet.api</artifactId>
+      <groupId>jakarta.servlet</groupId>
+      <artifactId>jakarta.servlet-api</artifactId>
       <version>6.0.0</version>
       <scope>provided</scope>
     </dependency>
@@ -19,3 +19,6 @@
     <finalName>my-jakarta-app</finalName>
   </build>
 </project>
+
+
+
