@@ -8,15 +8,14 @@ import jakarta.servlet.RequestDispatcher;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/first")
-public class FirstServlet extends HttpServlet{
+@WebServlet("/forward")
+public class ForwardServlet extends HttpServlet{
   public void doGet(HttpServletRequest req,
-                    HttpServletResponse res)
-  thorws ServletException,IOException{
+                   HttpServletResponse res)
+  throws ServletException,IOException{
     PrintWriter out = res.getWriter();
-    out.println("<h1>This Is First servlet !</h1>")
-    RequestDispatcher rd = req.getRequestDispatcher("/forward");
-    rd.forward(req,res);
+    out.println("<h1>Second servlet</h1>");
+    out.println("<h1>Acces this data Man!!</h1>");
     
   }
 }
