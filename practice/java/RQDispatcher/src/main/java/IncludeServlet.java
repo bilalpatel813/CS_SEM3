@@ -16,7 +16,7 @@ public class IncludeServlet extends HttpServlet{
     PrintWriter out = res.getWriter();
     out.println("<h1>Include servlet</h1>");
     out.println("<h1>Before include </h1>");
-    RequestDispatcher rd = req.RequestDispatcher("/forward");
+    RequestDispatcher rd = req.getRequestDispatcher("/forward");
     rd.include(req,res);
     out.println("After include");
   }

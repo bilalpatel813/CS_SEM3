@@ -12,9 +12,9 @@ import java.io.PrintWriter;
 public class FirstServlet extends HttpServlet{
   public void doGet(HttpServletRequest req,
                     HttpServletResponse res)
-  thorws ServletException,IOException{
+  throws ServletException,IOException{
     PrintWriter out = res.getWriter();
-    out.println("<h1>This Is First servlet !</h1>")
+    out.println("<h1>This Is First servlet !</h1>");
     RequestDispatcher rd = req.getRequestDispatcher("/forward");
     rd.forward(req,res);
     
