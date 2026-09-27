@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 public class lifecycleServlet extends HttpServlet{
   @Override
   public void init() throws ServletException{
-    System.out.pintln("Init() method called");
+    System.out.println("Init() method called");
   }
   @Override
   protected void service(HttpServletRequest request,HttpServletResponse response) throws ServletException,IOException{
@@ -25,7 +25,7 @@ public class lifecycleServlet extends HttpServlet{
     out.println("</html>");
   }
   @Override
-  public void destory(){
+  public void destroy(){
     System.out.println("DEstory() method called");
   }
 }

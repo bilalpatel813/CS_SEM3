@@ -6,20 +6,20 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-@WebServlet(name="helloServlet",value="/hello-servlett")
+@WebServlet(name="helloServlet",value="/hello-servlet")
 public class HelloServlet extends HttpServlet{
-  private string message;
-  public void init(){message="Hey dev! wassup"}
+  private String message;
+  public void init(){message="Hey dev! wassup";}
   public void doGet(HttpServletRequest request
                     ,HttpServletResponse response)
-  extends ServletException,IOException{
+  throws ServletException,IOException{
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
     out.println("<html><body>");
     out.println("<h1>" + message + "</h1>");
     out.println("</body></html>");
   }
-  public void destory(){
+  public void destroy(){
     System.out.println("destory func call");
   }
 }
