@@ -1,5 +1,6 @@
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.annotation.WebInitParam;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -18,7 +19,7 @@ public class ConfigServlet extends HttpServlet{
 
   public void doGet(HttpServletRequest request
                     ,HttpServletResponse response)
-  thorws ServletException,IOException{
+  throws ServletException,IOException{
     ServletConfig config = getServletConfig();
     ServletContext context = getServletContext();
 
@@ -27,7 +28,6 @@ public class ConfigServlet extends HttpServlet{
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
     out.println("Config: "+configMessage);
-    out.println("Context: "+appName)
-    
+    out.println("Context: "+appName);
   }
 }
