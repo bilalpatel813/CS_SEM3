@@ -19,7 +19,7 @@ public class readSession extends HttpServlet{
     HttpSession session = req.getSession(false);
     res.setContentType("text/html");
     PrintWriter out = res.getWriter();
-    if(sessiom!=null){
+    if(session!=null){
       String game = (String) session.getAttribute("favGame");
       if(game!=null){
         out.println("<h2> session game : "+game+"</h2>");
