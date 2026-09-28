@@ -10,18 +10,27 @@ import jakarta.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/createSession")
-public class CreateSession extends HttpServlet{
-  protected void doPost(HttpServletRequest req,
+
+@WebServlet("/readSession")
+public class readSession extends HttpServlet{
+  protected void doGet(HttpServletRequest req,
                        HttpServletResponse res)
   throws ServletException,IOException{
-    String game = req.getParameter("game");
-    HttpSession session = req.getSession();
-    session.setAttribute("favGame",game);
+    HttpSession session = req.getSession(false);
     res.setContentType("text/html");
     PrintWriter out = res.getWriter();
-    out.println("<h1>Session created Game: "+game+"</h1>");
-    out.println("<h3><a href='readSession'> Read Session </a></h3>");
-    
+    if(sessiom!=null){
+      String game = (String) session.getAttribute("favGame");
+      if(game!=null){
+        out.println("<h2> session game : "+game+"</h2>");
+      }
+      else{
+        out.println("<h2>No Game found in Session</h2>");
+      }
+    }
+    else{
+      out.println("<h2> No session FOund</h2>");
+    }
+    out.println("<h3><a href='login.html'> Back to Login Form</a></h3>");
   }
 }
