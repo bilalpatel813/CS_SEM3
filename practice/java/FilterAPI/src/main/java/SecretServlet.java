@@ -13,6 +13,6 @@ public class SecretServlet extends HttpServlet{
   throws ServletException,IOException{
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
-    out.printn("Wlcome u passed the filter test!");
+    out.println("Wlcome u passed the filter test!");
   }
 }
