@@ -1,4 +1,5 @@
 # CS SEM 3
-- All practical of Sem 3 performed by me
-- covers: DS, OS, Java
+- This repo will provide you the practicals solution of certain practical subject studied in SEM 3 of IYC college university of Mumbai 
+ - 🌟 Star the repo if you find it helpfull.. 
+
   
